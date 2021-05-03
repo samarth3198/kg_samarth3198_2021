@@ -14,3 +14,17 @@ const numberMap = {
     8: "Eight",
     9: "Nine",
 };
+
+let result = []; // Array of Strings for output
+
+// For each number
+for (let number of numbers) {
+    let converted = ""; // Taking string variable to store string representation of each digit
+
+    for(let digit of number)
+        converted += numberMap[digit]; // Concatenating string mapping of each digit for a particular number
+
+    result.push(converted); // Adding string representation of each number into array of strings
+}
+
+console.log(result.join(",")); // Printing out the resultant array to the console
